@@ -1,4 +1,7 @@
+import { Link } from "expo-router";
 import React from "react";
+import { FieldValues, useFormContext } from "react-hook-form";
+import { NativeSyntheticEvent, TextInputKeyPressEventData } from "react-native";
 import * as z from "zod";
 
 import {
@@ -10,11 +13,9 @@ import {
 import { FormErrors } from "@/components/ui/form-errors";
 import { HStack } from "@/components/ui/hstack";
 import { Input, InputField } from "@/components/ui/input";
-import { Link, LinkText } from "@/components/ui/link";
+import { LinkText } from "@/components/ui/link";
 import { VStack } from "@/components/ui/vstack";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FieldValues, useFormContext } from "react-hook-form";
-import { NativeSyntheticEvent, TextInputKeyPressEventData } from "react-native";
 
 const schema = z.object({
   email: z.email(),
@@ -75,7 +76,7 @@ export default function SignInForm({
           <FormItem>
             <HStack>
               <FormLabel style={{ flex: 1 }}>Password:</FormLabel>
-              <Link href="/forgot-password">
+              <Link href="/accounts">
                 <LinkText size="sm">Forgot your password?</LinkText>
               </Link>
             </HStack>

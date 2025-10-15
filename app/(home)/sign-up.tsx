@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useState } from "react";
 import { ScrollView, View } from "react-native";
 
@@ -15,6 +15,7 @@ import { VStack } from "@/components/ui/vstack";
 import { FormProvider } from "@/providers/form";
 
 export default function SignUpScreen() {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const data = {
@@ -23,7 +24,8 @@ export default function SignUpScreen() {
   };
 
   const signUpWithEmail = async (data: any) => {
-    console.log("Sign up with email:", data);
+    setLoading(false);
+    router.push("/accounts");
   };
 
   return (

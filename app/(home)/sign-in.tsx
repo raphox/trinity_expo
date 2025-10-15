@@ -5,6 +5,7 @@ import { View } from "react-native";
 import SignInForm, { resolver } from "@/components/app/home/sign-in-form";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
+import { Alert, AlertText } from "@/components/ui/alert";
 import { ButtonText } from "@/components/ui/button";
 import { SubmitButton } from "@/components/ui/form-control-field";
 import { HStack } from "@/components/ui/hstack";
@@ -24,7 +25,7 @@ export default function SigninScreen() {
 
   const signInWithEmail = async (data: any) => {
     setLoading(false);
-    router.push("/(authenticated)");
+    router.push("/accounts");
   };
 
   return (
@@ -37,6 +38,9 @@ export default function SigninScreen() {
         <VStack className="flex-1 w-full max-w-xl mx-auto">
           <View className="flex-1 justify-center">
             <ThemedText type="title" className="mb-12">Welcome Back</ThemedText>
+            <Alert action="muted" variant="outline" className="mb-4">
+              <AlertText>Use any valid email and password.</AlertText>
+            </Alert>
             <SignInForm onSubmit={signInWithEmail} />
           </View>
           <View className="h-32 flex-none">

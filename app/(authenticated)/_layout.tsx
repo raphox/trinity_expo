@@ -1,8 +1,10 @@
 import { Tabs } from "expo-router";
+import { ArrowUpDownIcon, ChartNoAxesCombinedIcon, CircleDollarSignIcon, SparklesIcon } from "lucide-react-native";
 import React from "react";
+import { Platform } from "react-native";
 
 import { HapticTab } from "@/components/haptic-tab";
-import { IconSymbol } from "@/components/ui/icon-symbol";
+import { Icon } from "@/components/ui/icon";
 import { Colors } from "@/constants/theme";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 
@@ -15,23 +17,43 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
         tabBarButton: HapticTab,
+        tabBarItemStyle: Platform.select({ native: { paddingVertical: 16 } }),
+        tabBarStyle: Platform.select({ native: { height: 110 } }),
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="accounts"
         options={{
-          title: "Home",
+          title: "Accounts",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Icon size="xl" as={CircleDollarSignIcon} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="insights"
         options={{
-          title: "Explore",
+          title: "Insights",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <Icon size="xl" as={ChartNoAxesCombinedIcon} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="rewards"
+        options={{
+          title: "Rewards",
+          tabBarIcon: ({ color }) => (
+            <Icon size="xl" as={SparklesIcon} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="payments"
+        options={{
+          title: "Payments",
+          tabBarIcon: ({ color }) => (
+            <Icon size="xl" as={ArrowUpDownIcon} color={color} />
           ),
         }}
       />
