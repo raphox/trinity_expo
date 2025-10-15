@@ -5,7 +5,7 @@ import { HelloWave } from "@/components/hello-wave";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { Button, ButtonText } from '@/components/ui/button';
+import { Button, ButtonText } from "@/components/ui/button";
 import { Link } from "expo-router";
 
 export default function HomeScreen() {
@@ -83,9 +83,13 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-        <Button className="data-[active=true]:bg-secondary-500">
-          <ButtonText className="data-[active=true]:text-typography-900">Click me</ButtonText>
-        </Button>
+        <Link href="/(home)" asChild>
+          <Button className="data-[active=true]:bg-secondary-500">
+            <ButtonText className="data-[active=true]:text-typography-900">
+              Back to Home
+            </ButtonText>
+          </Button>
+        </Link>
       </ThemedView>
     </ParallaxScrollView>
   );
