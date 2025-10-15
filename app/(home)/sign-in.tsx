@@ -37,7 +37,9 @@ export default function SigninScreen() {
       >
         <VStack className="flex-1 w-full max-w-xl mx-auto">
           <View className="flex-1 justify-center">
-            <ThemedText type="title" className="mb-12">Welcome Back</ThemedText>
+            <ThemedText type="title" className="mb-12">
+              Welcome Back
+            </ThemedText>
             <Alert action="muted" variant="outline" className="mb-4">
               <AlertText>Use any valid email and password.</AlertText>
             </Alert>

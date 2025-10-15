@@ -25,7 +25,10 @@ export default function RootLayout() {
       <ThemeProvider value={isDark ? DarkTheme : DefaultTheme}>
         <Stack>
           <Stack.Screen name="(home)" options={{ headerShown: false }} />
-          <Stack.Screen name="(authenticated)" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="(authenticated)"
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="modal"
             options={{ presentation: "modal", title: "Modal" }}

@@ -5,13 +5,7 @@ const LogoComponent = (props: SvgProps) => {
   const fill = props.fill ?? "black";
 
   return (
-    <Svg
-      width={588}
-      height={174}
-      viewBox="0 0 588 174"
-      fill="none"
-      {...props}
-    >
+    <Svg width={588} height={174} viewBox="0 0 588 174" fill="none" {...props}>
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -20,6 +14,6 @@ const LogoComponent = (props: SvgProps) => {
       />
     </Svg>
   );
-}
+};
 
 export default LogoComponent;

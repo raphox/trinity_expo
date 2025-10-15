@@ -7,7 +7,7 @@ import {
   Form,
   FormProvider as FormProviderBase,
   Resolver,
-  useForm
+  useForm,
 } from "react-hook-form";
 
 import { Platform } from "react-native";
@@ -38,7 +38,11 @@ export function FormProvider<T extends FieldValues>({
       await onSubmit(fields.data);
     } catch (error) {
       let errorMessage: string | undefined = undefined;
-      const errorObject = error as { code: string; message?: string; details?: string };
+      const errorObject = error as {
+        code: string;
+        message?: string;
+        details?: string;
+      };
 
       console.warn("FormProvider error:", errorObject);
 
@@ -62,7 +66,9 @@ export function FormProvider<T extends FieldValues>({
   return (
     <FormProviderBase setError={setError} {...formProps}>
       {Platform.OS === "web" ? (
-        <Form onSubmit={handleSubmit} className="flex h-full w-full">{children}</Form>
+        <Form onSubmit={handleSubmit} className="flex h-full w-full">
+          {children}
+        </Form>
       ) : (
         children
       )}

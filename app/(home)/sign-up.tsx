@@ -36,15 +36,29 @@ export default function SignUpScreen() {
         onSubmit={signUpWithEmail}
       >
         <VStack className="flex-1 w-full max-w-xl mx-auto">
-          <ScrollView className="flex-1 w-full" contentContainerStyle={{ justifyContent: 'center', flexGrow: 1 }}>
-            <ThemedText type="title" className="text-center">Join over 250.000 humans at Zion</ThemedText>
-            <ThemedText className="text-center my-4">Sign up for Trinity — if you believe you can handle the truth.</ThemedText>
+          <ScrollView
+            className="flex-1 w-full"
+            contentContainerStyle={{ justifyContent: "center", flexGrow: 1 }}
+          >
+            <ThemedText type="title" className="text-center">
+              Join over 250.000{"\n"}humans at Zion
+            </ThemedText>
+            <ThemedText className="text-center my-4">
+              Sign up for Trinity — if you believe you can handle the truth.
+            </ThemedText>
             <SignUpForm onSubmit={signUpWithEmail} />
             <ThemedText className="mt-4 text-justify">
-              By proceeding, you accept the <LinkText>Trinity Platform Terms & Conditions</LinkText>, <LinkText>Rewards Policy</LinkText>, and <LinkText>Privacy Policy</LinkText> — though remember: there&apos;s no privacy in the Matrix.
+              By proceeding, you accept the{" "}
+              <LinkText>Trinity Platform Terms & Conditions</LinkText>,{" "}
+              <LinkText>Rewards Policy</LinkText>, and{" "}
+              <LinkText>Privacy Policy</LinkText> — though remember:
+              there&apos;s no privacy in the Matrix.
             </ThemedText>
             <ThemedText className="mt-4 text-justify">
-              You also consent to receive encrypted transmissions about Trinity&apos;s financial reality. Some of them might be from our “third-party partners”... or maybe from agents trying to track your signal.
+              You also consent to receive encrypted transmissions about
+              Trinity&apos;s financial reality. Some of them might be from our
+              “third-party partners”... or maybe from agents trying to track
+              your signal.
             </ThemedText>
             <ThemedText className="mt-4 text-justify">
               Take the red pill to continue.

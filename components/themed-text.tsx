@@ -14,7 +14,7 @@ const ThemedTextStyle = tva({
     type: {
       default: "text-base leading-6",
       defaultSemiBold: "text-base leading-6 font-semibold",
-      title: "text-2xl font-bold leading-8",
+      title: "text-3xl font-bold leading-8 mb-4",
       subtitle: "text-xl font-bold",
       link: "text-base leading-[30px] text-[#0a7ea4]",
     },
@@ -38,9 +38,6 @@ export function ThemedText({
   const theme = useColorScheme() ?? "light";
 
   return (
-    <Text
-      className={ThemedTextStyle({ type, className, theme })}
-      {...rest}
-    />
+    <Text className={ThemedTextStyle({ type, className, theme })} {...rest} />
   );
 }

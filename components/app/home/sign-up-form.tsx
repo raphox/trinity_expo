@@ -37,7 +37,7 @@ export default function SignInForm({
   const { control, formState, handleSubmit } = useFormContext<FormData>();
 
   const handleOnKeyPress = (
-    event: NativeSyntheticEvent<TextInputKeyPressEventData>
+    event: NativeSyntheticEvent<TextInputKeyPressEventData>,
   ): void => {
     if (event.nativeEvent.key === "Enter") {
       event.stopPropagation();

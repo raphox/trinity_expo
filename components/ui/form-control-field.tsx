@@ -29,18 +29,18 @@ const Form = FormProvider;
 
 type FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = {
   name: TName;
 };
 
 const FormFieldContext = React.createContext<FormFieldContextValue>(
-  {} as FormFieldContextValue
+  {} as FormFieldContextValue,
 );
 
 const FormControlField = <
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   ...props
 }: ControllerProps<TFieldValues, TName>) => {
@@ -79,7 +79,7 @@ type FormItemContextValue = {
 };
 
 const FormItemContext = React.createContext<FormItemContextValue>(
-  {} as FormItemContextValue
+  {} as FormItemContextValue,
 );
 
 function FormItem({ children }: React.ComponentProps<typeof FormControlBase>) {
@@ -114,7 +114,7 @@ function FormLabel({
 }
 
 function FormDescription(
-  props: React.ComponentProps<typeof FormControlHelperText>
+  props: React.ComponentProps<typeof FormControlHelperText>,
 ) {
   const { formDescriptionId } = useFormField();
 
@@ -169,5 +169,5 @@ export {
   FormLabel,
   FormMessage,
   SubmitButton,
-  useFormField
+  useFormField,
 };
