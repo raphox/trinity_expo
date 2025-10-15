@@ -15,7 +15,7 @@ const ThemedTextStyle = tva({
       default: "text-base leading-6",
       defaultSemiBold: "text-base leading-6 font-semibold",
       title: "text-3xl font-bold leading-8 mb-4",
-      subtitle: "text-xl font-bold",
+      subtitle: "text-xl font-bold opacity-80",
       link: "text-base leading-[30px] text-[#0a7ea4]",
     },
     theme: {
