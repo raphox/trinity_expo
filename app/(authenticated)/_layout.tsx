@@ -1,5 +1,10 @@
 import { Tabs } from "expo-router";
-import { ArrowUpDownIcon, ChartNoAxesCombinedIcon, CircleDollarSignIcon, SparklesIcon } from "lucide-react-native";
+import {
+  ArrowUpDownIcon,
+  ChartNoAxesCombinedIcon,
+  CircleDollarSignIcon,
+  SparklesIcon,
+} from "lucide-react-native";
 import React from "react";
 import { Platform } from "react-native";
 
