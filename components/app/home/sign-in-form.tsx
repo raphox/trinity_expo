@@ -16,16 +16,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FieldValues, useFormContext } from "react-hook-form";
 import { NativeSyntheticEvent, TextInputKeyPressEventData } from "react-native";
 
-const schema = z
-  .object({
-    email: z.email(),
-    password: z.string().min(6).max(100),
-    passwordConfirm: z.string(),
-  })
-  .refine((data) => data.password === data.passwordConfirm, {
-    message: "Passwords don't match",
-    path: ["passwordConfirm"],
-  });
+const schema = z.object({
+  email: z.email(),
+  password: z.string().min(6).max(100),
+});
 
 type FormData = z.infer<typeof schema>;
 
@@ -85,24 +79,6 @@ export default function SignInForm({
                 <LinkText size="sm">Forgot your password?</LinkText>
               </Link>
             </HStack>
-            <Input>
-              <InputField
-                type="password"
-                onChangeText={onChange}
-                onKeyPress={handleOnKeyPress}
-                {...rest}
-              />
-            </Input>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormControlField
-        control={control}
-        name="passwordConfirm"
-        render={({ field: { onChange, ...rest } }) => (
-          <FormItem>
-            <FormLabel>Password Confirmation:</FormLabel>
             <Input>
               <InputField
                 type="password"
