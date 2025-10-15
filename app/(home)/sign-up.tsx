@@ -1,6 +1,6 @@
 import { Link } from "expo-router";
 import { useState } from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 
 import { resolver } from "@/components/app/home/sign-in-form";
 import SignUpForm from "@/components/app/home/sign-up-form";
@@ -34,7 +34,7 @@ export default function SignUpScreen() {
         onSubmit={signUpWithEmail}
       >
         <VStack className="flex-1 w-full max-w-xl mx-auto">
-          <View className="flex-1 justify-center">
+          <ScrollView className="flex-1 w-full" contentContainerStyle={{ justifyContent: 'center', flexGrow: 1 }}>
             <ThemedText type="title" className="text-center">Join over 250.000 humans at Zion</ThemedText>
             <ThemedText className="text-center my-4">Sign up for Trinity — if you believe you can handle the truth.</ThemedText>
             <SignUpForm onSubmit={signUpWithEmail} />
@@ -47,7 +47,7 @@ export default function SignUpScreen() {
             <ThemedText className="mt-4 text-justify">
               Take the red pill to continue.
             </ThemedText>
-          </View>
+          </ScrollView>
           <View className="h-32 flex-none">
             <SubmitButton
               className="mt-4 disabled:opacity-50"
