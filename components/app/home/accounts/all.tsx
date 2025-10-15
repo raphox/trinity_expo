@@ -12,7 +12,9 @@ import { ChevronRightIcon } from "lucide-react-native";
 export default function AllScreen() {
   return (
     <View className="flex-1 pt-8">
-      <ThemedText type="title">Welcome, <Text className="text-green-600">Neo</Text></ThemedText>
+      <ThemedText type="title">
+        Welcome, <Text className="text-green-600">Neo</Text>
+      </ThemedText>
 
       <ThemedText type="subtitle">Credit</ThemedText>
 
@@ -64,6 +66,6 @@ export default function AllScreen() {
           </ButtonText>
         </Button>
       </Link>
-    </View >
+    </View>
   );
 }

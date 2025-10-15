@@ -7,4 +7,3 @@ import Money from "./money";
 import Mortgages from "./mortgages";
 
 export { All, Credit, Insurance, Invest, Loans, Money, Mortgages };
-

@@ -10,7 +10,9 @@ import { Icon } from "@/components/ui/icon";
 export default function CreditScreen() {
   return (
     <View className="flex-1 pt-8">
-      <ThemedText type="subtitle" className="mb-3">You&apos;ve borrowed</ThemedText>
+      <ThemedText type="subtitle" className="mb-3">
+        You&apos;ve borrowed
+      </ThemedText>
       <ThemedText type="title">$363,000,400.00</ThemedText>
       <ThemedText type="subtitle">Available: $100,000.00</ThemedText>
 
@@ -26,12 +28,20 @@ export default function CreditScreen() {
         </HStack>
         <HStack space="md" className="justify-between mb-2">
           <View>
-            <ThemedText type="defaultSemiBold" className="text-2xl">$363,000,400.00</ThemedText>
-            <ThemedText type="default" className="opacity-70">Current balance</ThemedText>
+            <ThemedText type="defaultSemiBold" className="text-2xl">
+              $363,000,400.00
+            </ThemedText>
+            <ThemedText type="default" className="opacity-70">
+              Current balance
+            </ThemedText>
           </View>
           <View>
-            <ThemedText type="defaultSemiBold" className="text-xl">$0.00</ThemedText>
-            <ThemedText type="default" className="opacity-70">Available</ThemedText>
+            <ThemedText type="defaultSemiBold" className="text-xl">
+              $0.00
+            </ThemedText>
+            <ThemedText type="default" className="opacity-70">
+              Available
+            </ThemedText>
           </View>
         </HStack>
         <HStack className="my-4 items-center opacity-70">
