@@ -8,6 +8,13 @@ The goal was simple: build something that looks and feels real, while pushing my
 
 I’m excited about the results — clean design, smooth navigation, and modern animations that make the experience feel truly next-gen.
 
+<p align="center">
+   <a href="http://www.youtube.com/watch?feature=player_embedded&v=zbmYsItFtvU" target="_blank">
+    <img src="http://img.youtube.com/vi/zbmYsItFtvU/0.jpg" alt="Watch the video" width="480" height="360" />
+   </a><br />
+   Youtube Video
+</p>
+
 ## Get started
 
 1. Install dependencies
